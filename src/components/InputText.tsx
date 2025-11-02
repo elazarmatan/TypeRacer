@@ -9,14 +9,13 @@ function InputText({text}:props) {
   const inputRef = useRef<HTMLInputElement | null>(null)
   const {isRunning,counter,setCounter,time,setIsRunning} = useTimer()
   const [correct,setCorrect] = useState(true)
-  if(text.length === counter)return <p>Your pace is {((counter +1) / time) * 60} words per minute.</p>
   if(isRunning) inputRef.current?.focus()
   useEffect(() => {
   if (!time && inputRef.current) {
     inputRef.current.value = '';
   }
 }, [time]);
-
+  if(text.length === counter)return <p>Your pace is {((counter +1) / time) * 60} words per minute.</p>
   return (
     <div id="inputText">
     <input type="text" placeholder={isRunning ? 'write text':'press on button start'} ref={inputRef} onKeyDown={(e:React.KeyboardEvent<HTMLInputElement>) => {
