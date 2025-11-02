@@ -1,0 +1,58 @@
+#timer{
+    grid-area: b;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+#leader{
+    grid-area: c;
+}
+#inputText{
+    grid-area: d;
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
+}
+input{
+    width: 80%;
+}
+#text{
+    display: flex;
+    grid-area: f;
+    max-width: 80%;
+    max-height: 2vh;
+    margin-left: 10%;
+    gap: 1%;
+    font-size: x-large;
+}
+header{
+    grid-area: a;
+}
+footer{
+    grid-area: e;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+body{
+    margin: 5px;
+    padding: 0;
+}
+#layout{
+    display: grid;
+    grid-template-areas: 'a a b'
+                         'f f f'
+                         'c d d '
+                         'e e e';
+    height: 96vh;
+    gap: 1%;
+    border: 7Px solid rgb(80, 80, 134);
+    border-radius: 10px;
+}
+.word-input{
+    border: 1px solid green;
+    color: green;
+}
+#incorect{
+    color: red;
+}
