@@ -1,5 +1,6 @@
 import React, { useRef, useState, useEffect } from "react"
 import { useTimer } from "../context/timer.context"
+import RecordSetting from "./RecordSetting"
 
 interface props{
     text:string[]
@@ -15,7 +16,7 @@ function InputText({text}:props) {
     inputRef.current.value = '';
   }
 }, [time]);
-  if(text.length === counter)return <p>Your pace is {((counter +1) / time) * 60} words per minute.</p>
+  if(text.length === counter)return <RecordSetting counter={counter} time={time}/>
   return (
     <div id="inputText">
     <input type="text" placeholder={isRunning ? 'write text':'press on button start'} ref={inputRef} onKeyDown={(e:React.KeyboardEvent<HTMLInputElement>) => {
@@ -32,7 +33,7 @@ function InputText({text}:props) {
             }
         }
     }}/>
-    {!correct && <p id="incorect">incorect try again</p>}
+    {!correct && <p id="incorect">incorect try again!</p>}
     </div>
   )
 }
