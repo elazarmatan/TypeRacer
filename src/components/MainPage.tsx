@@ -4,8 +4,8 @@ import TextUser from "./TextUser"
 import Timer from "./Timer"
 
 function MainPage() {
-  const text = ['Lorem' ,'ipsum', 'dolor', 'sit', 'amet']
-    
+  const texta = ['Lorem' ,'ipsum', 'dolor', 'sit', 'amet']
+  const text = ['Lorem' ,'ipsum']
   return (
     <>
     <Timer/>
