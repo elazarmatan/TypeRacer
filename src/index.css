@@ -1,35 +1,33 @@
 #timer{
-    grid-area: b;
     display: flex;
     justify-content: space-around;
     align-items: center;
+    width: 20vw;
 }
 #leader{
-    grid-area: c;
+
 }
 #inputText{
-    grid-area: d;
     display: flex;
-    /* justify-content: center; */
     align-items: center;
 }
 input{
-    width: 80%;
+    width: 40vw;
 }
 #text{
     display: flex;
-    grid-area: f;
-    max-width: 80%;
+    justify-content: space-around;
+    width: 60%;
     max-height: 2vh;
     margin-left: 10%;
-    gap: 1%;
     font-size: x-large;
 }
 header{
-    grid-area: a;
+    color: orangered;
+    font-size: x-large;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 footer{
-    grid-area: e;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -39,12 +37,12 @@ body{
     padding: 0;
 }
 #layout{
-    display: grid;
-    grid-template-areas: 'a a b'
-                         'f f f'
-                         'c d d '
-                         'e e e';
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
     height: 96vh;
+    width: 98%;
     gap: 1%;
     border: 7Px solid rgb(80, 80, 134);
     border-radius: 10px;
@@ -55,4 +53,8 @@ body{
 }
 #incorect{
     color: red;
+}
+#record{
+    display: flex;
+    flex-direction: column;
 }
