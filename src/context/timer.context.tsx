@@ -6,7 +6,9 @@ type TimerContextType = {
   isRunning: boolean;
   setIsRunning: React.Dispatch<React.SetStateAction<boolean>>;
   counter:number
-  setCounter:React.Dispatch<React.SetStateAction<number>>
+  setCounter:React.Dispatch<React.SetStateAction<number>>;
+  setSaveRecord: React.Dispatch<React.SetStateAction<boolean>>;
+  saveRecord:boolean
 };
 
 interface ThemeProviderProps {
@@ -21,8 +23,9 @@ export function TimerProvider(props:ThemeProviderProps){
     const [time,setTime] = useState(0)
     const [isRunning,setIsRunning] = useState(false)
     const [counter,setCounter] = useState(0)
+    const [saveRecord,setSaveRecord] = useState(false)
 
-    return <context.Provider value={{time,setTime,isRunning,setIsRunning,counter,setCounter}}>{props.children}</context.Provider>
+    return <context.Provider value={{time,setTime,isRunning,setIsRunning,counter,setCounter,saveRecord,setSaveRecord}}>{props.children}</context.Provider>
 }
 
 export function useTimer() {
