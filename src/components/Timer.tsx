@@ -12,15 +12,6 @@ function Timer() {
     },[isRunning,time])
   return (
     <div id="timer">
-    {!time ? <button onClick={() => {
-        setIsRunning(true)
-    }}>start</button>:
-    <button onClick={e => {
-        setIsRunning(true)
-        setTime(0)
-        setCounter(0)
-    }}>start again</button>
-    }
     <h1>{time}</h1>
     </div>
   )
