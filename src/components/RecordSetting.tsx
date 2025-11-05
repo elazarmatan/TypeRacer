@@ -8,9 +8,9 @@ interface props {
 }
 
 function RecordSetting({ counter, time }: props) {
-    const {setSaveRecord} = useTimer()
+    const {setSaveRecord,setCounter,setTime} = useTimer()
   const inputName = useRef<HTMLInputElement | null>(null);
-  const record = ((counter) / time) * 60;
+  const record = Math.round(((counter / time) * 60) * 1000) / 1000
   const [enterName, setEnterName] = useState(false);
   useEffect(() => {
     inputName.current?.focus();
@@ -36,10 +36,16 @@ function RecordSetting({ counter, time }: props) {
                   keepLeaderboard(record, inputName.current.value);
                   setEnterName(true);
                   setSaveRecord(prev => !prev)
+                  setCounter(0)
+                  setTime(0)
                 }
               }
             }}
           />
+        <button onClick={() => {
+            setCounter(0)
+            setTime(0)
+            }}>x</button>
         </div>
       )}
       <p>Your pace is {record} words per minute.</p>
