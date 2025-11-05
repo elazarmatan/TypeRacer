@@ -24,6 +24,7 @@ export function TimerProvider(props:ThemeProviderProps){
     const [isRunning,setIsRunning] = useState(false)
     const [counter,setCounter] = useState(0)
     const [saveRecord,setSaveRecord] = useState(false)
+    
 
     return <context.Provider value={{time,setTime,isRunning,setIsRunning,counter,setCounter,saveRecord,setSaveRecord}}>{props.children}</context.Provider>
 }
