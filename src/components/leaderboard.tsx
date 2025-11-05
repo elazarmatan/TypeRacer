@@ -4,7 +4,6 @@ import getLeaderboard from "../utils/getLeaderBoard"
 function Leaderboard() {
     const {saveRecord} = useTimer()
     const leaderboard = getLeaderboard()
-    console.log(saveRecord)
   return (
     <div id="leader">
     <h1>Leaderboard</h1>
