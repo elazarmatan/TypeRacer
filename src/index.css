@@ -1,58 +1,74 @@
 #timer{
-    grid-area: b;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
+    color: brown;
 }
-#leader{
-    grid-area: c;
-}
+
 #inputText{
-    grid-area: d;
     display: flex;
-    /* justify-content: center; */
-    align-items: center;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 60%;
+    height: 10vh;
 }
 input{
-    width: 80%;
+    
 }
 #text{
     display: flex;
-    grid-area: f;
-    max-width: 80%;
-    max-height: 2vh;
-    margin-left: 10%;
-    gap: 1%;
+    align-items: start;
+    gap: 3%;
     font-size: x-large;
+    width: 60%;
+    height: 10vh;
 }
 header{
-    grid-area: a;
+    color: orangered;
+    font-size: x-large;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 footer{
-    grid-area: e;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    
 }
 body{
-    margin: 5px;
+    margin: 0;
     padding: 0;
 }
 #layout{
-    display: grid;
-    grid-template-areas: 'a a b'
-                         'f f f'
-                         'c d d '
-                         'e e e';
-    height: 96vh;
-    gap: 1%;
-    border: 7Px solid rgb(80, 80, 134);
-    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    height: 100vh;
+    background: aliceblue;
 }
 .word-input{
-    border: 1px solid green;
+    font-size: 110%;
     color: green;
+     text-decoration: underline;
+    text-decoration-color: green;
+    text-decoration-thickness: 3px;
+    padding: 1%;
 }
 #incorect{
     color: red;
+}
+#record{
+    
+}
+#buttons{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 20vw;
+}
+button{
+    height: 5vh;
+    width: 5vw;
+    border-radius: 10Px;
+    color: orangered;
+    background-color: white;
+}
+button:hover{
+    background-color: orangered;
+    color: white;
+    transform: scale(1.2);
 }
