@@ -1,26 +1,24 @@
 #timer{
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    width: 20vw;
+    color: brown;
 }
-#leader{
 
-}
 #inputText{
     display: flex;
-    align-items: center;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 60%;
+    height: 10vh;
 }
 input{
-    width: 40vw;
+    
 }
 #text{
     display: flex;
-    justify-content: space-around;
-    width: 60%;
-    max-height: 2vh;
-    margin-left: 10%;
+    align-items: start;
+    gap: 3%;
     font-size: x-large;
+    width: 60%;
+    height: 10vh;
 }
 header{
     color: orangered;
@@ -28,12 +26,10 @@ header{
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 footer{
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    
 }
 body{
-    margin: 5px;
+    margin: 0;
     padding: 0;
 }
 #layout{
@@ -41,20 +37,38 @@ body{
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    height: 96vh;
-    width: 98%;
-    gap: 1%;
-    border: 7Px solid rgb(80, 80, 134);
-    border-radius: 10px;
+    height: 100vh;
+    background: aliceblue;
 }
 .word-input{
-    border: 1px solid green;
+    font-size: 110%;
     color: green;
+     text-decoration: underline;
+    text-decoration-color: green;
+    text-decoration-thickness: 3px;
+    padding: 1%;
 }
 #incorect{
     color: red;
 }
 #record{
+    
+}
+#buttons{
     display: flex;
-    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    width: 20vw;
+}
+button{
+    height: 5vh;
+    width: 5vw;
+    border-radius: 10Px;
+    color: orangered;
+    background-color: white;
+}
+button:hover{
+    background-color: orangered;
+    color: white;
+    transform: scale(1.2);
 }
