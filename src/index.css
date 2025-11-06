@@ -40,13 +40,20 @@ body{
     height: 100vh;
     background: aliceblue;
 }
-.word-input{
-    font-size: 110%;
+.correct{
     color: green;
-     text-decoration: underline;
-    text-decoration-color: green;
+}
+.incorrect{
+    color: red;
+}
+.words{
+    color: gray;
+}
+.word-specific{
+    font-size: 110%;
+    text-decoration: underline;
+    text-decoration-color: black;
     text-decoration-thickness: 3px;
-    padding: 1%;
 }
 #incorect{
     color: red;
@@ -71,4 +78,24 @@ button:hover{
     background-color: orangered;
     color: white;
     transform: scale(1.2);
+}
+#leader{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    border: 8pxn solid black;
+    width: 30vw;
+}
+#headLeder{
+    display: flex;
+    justify-content: center;
+}
+li{
+    display: flex;
+    justify-content: center;
+}
+li:nth-child(odd) {
+  background-color: antiquewhite;
+}
+#first{
+    background-color: rgb(47, 203, 47);
+    color: rgb(239, 236, 232);
 }
