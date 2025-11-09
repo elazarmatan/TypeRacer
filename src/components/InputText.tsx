@@ -1,5 +1,5 @@
-import React, { useRef, useState, useEffect } from "react";
-import { useTimer } from "../context/timer.context";
+import React, { useRef, useEffect } from "react";
+import { useMyContext } from "../context/timer.context";
 import RecordSetting from "./RecordSetting";
 import inputText from "../utils/inputText";
 
@@ -9,8 +9,7 @@ interface props {
 
 function InputText({ text }: props) {
   const inputRef = useRef<HTMLInputElement | null>(null);
-  const { isRunning, counter, setCounter, time, setIsRunning } = useTimer();
-  const [correct, setCorrect] = useState(true);
+  const { isRunning, counter, setCounter, time, setIsRunning,correct,setCorrect } = useMyContext();
   if (isRunning) inputRef.current?.focus();
   useEffect(() => {
     if (!time && inputRef.current) {
@@ -25,6 +24,7 @@ function InputText({ text }: props) {
         type="text"
         placeholder={isRunning ? "write text" : "press on button start"}
         ref={inputRef}
+        disabled={isRunning ? false:true}
         onKeyDown={(e: React.KeyboardEvent<HTMLInputElement>) =>
           inputText({
             isRunning,
