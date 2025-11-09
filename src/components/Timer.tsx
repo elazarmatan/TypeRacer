@@ -1,8 +1,8 @@
 import { useEffect } from "react"
-import { useTimer } from "../context/timer.context"
+import { useMyContext} from "../context/timer.context"
 
 function Timer() {
-    const {time,setTime,isRunning,setIsRunning,setCounter}  = useTimer()
+    const {time,setTime,isRunning,setIsRunning,setCounter}  = useMyContext()
     useEffect(() => {
         let interval:number
         if(isRunning){

@@ -10,7 +10,6 @@ interface params {
 }
 
 export default function inputText({
-  isRunning,
   e,
   inputRef,
   counter,
@@ -19,14 +18,13 @@ export default function inputText({
   setCounter,
   setCorrect,
 }: params) {
-  if (!isRunning) e.preventDefault();
   if (e.key === " ") {
-    const userText = inputRef.current?.value.split(" ");
-
-    if (userText && userText[counter] === text[counter]) {
+    e.preventDefault()
+    if (inputRef.current && inputRef.current.value.trim() === text[counter]) {
       if (text.length - 1 === counter) setIsRunning(false);
       setCounter(counter + 1);
       setCorrect(true);
+      inputRef.current.value = "";
     } else {
       e.preventDefault();
       setCorrect(false);

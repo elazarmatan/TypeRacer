@@ -6,11 +6,10 @@ import Timer from "./Timer"
 
 function MainPage() {
   const text = ['Lorem' ,'ipsum', 'dolor', 'sit', 'amet']
-  // const text = ['Lorem' ,'ipsum']
   return (
     <>
-    <Timer/>
     <StartButtons/>
+    <Timer/>
     <TextUser text={text}/>
     <InputText text={text}/>
     <Leaderboard/>

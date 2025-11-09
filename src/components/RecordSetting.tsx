@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 import keepLeaderboard from "../utils/keepLeaderboard";
-import { useTimer } from "../context/timer.context";
+import { useMyContext } from "../context/timer.context";
 
 interface props {
   counter: number;
@@ -8,7 +8,7 @@ interface props {
 }
 
 function RecordSetting({ counter, time }: props) {
-    const {setSaveRecord,setCounter,setTime} = useTimer()
+    const {setSaveRecord,setCounter,setTime} = useMyContext()
   const inputName = useRef<HTMLInputElement | null>(null);
   const record = Math.round(((counter / time) * 60) * 1000) / 1000
   const [enterName, setEnterName] = useState(false);
@@ -29,7 +29,6 @@ function RecordSetting({ counter, time }: props) {
             onKeyDown={(e: React.KeyboardEvent<HTMLInputElement>) => {
             if(e.key === ' '){
                  e.preventDefault()
-                return;
             }
               if (inputName.current?.value.trim()) {
                 if (e.key === "Enter") {
