@@ -1,7 +1,7 @@
-import { useTimer } from "../context/timer.context"
+import { useMyContext } from "../context/timer.context"
 
 function StartButtons() {
-    const {setIsRunning,setTime,setCounter,isRunning} = useTimer()
+    const {setIsRunning,setTime,setCounter,isRunning} = useMyContext()
   return (
     <div id="buttons">
     {!isRunning ? <button onClick={() => {
